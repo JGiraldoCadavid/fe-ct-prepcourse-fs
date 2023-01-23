@@ -102,7 +102,7 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   if(arguments.length===0){
+   /*if(arguments.length===0){
       return 0
    }else if(arguments.length===1){
       return arguments[0]
@@ -112,7 +112,12 @@ function multiplicarArgumentos() {
              mult*=arguments[i] 
       }
       return mult
-   }
+   }*/
+   let array=Array.from(arguments);
+   if(arguments.length===0) return 0;
+   if(arguments.length===1) return arguments[0];
+   let argumentos=array.reduce((x0,x1)=>x0*x1);
+   return argumentos;
 }
 
 function cuentoElementos(array) {
